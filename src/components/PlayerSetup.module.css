@@ -1,0 +1,218 @@
+.wrapper {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  animation: fade-in 0.5s ease;
+}
+
+.card {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 560px;
+  box-shadow: var(--shadow), 0 0 60px rgba(90, 0, 180, 0.2);
+  animation: slide-up 0.5s ease;
+}
+
+.titleBlock {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 8px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  color: var(--accent);
+  text-shadow: 0 0 30px var(--accent-glow);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.players {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.playerBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.input {
+  background: var(--cell-bg);
+  border: 2px solid var(--cell-border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.markPicker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.markLabel {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.markButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.markBtn {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  background: var(--cell-bg);
+  border: 2px solid var(--cell-border);
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.markX.active {
+  background: rgba(255, 107, 157, 0.15);
+  border-color: var(--x-color);
+  color: var(--x-color);
+  box-shadow: 0 0 16px var(--x-glow);
+}
+
+.markO.active {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: var(--o-color);
+  color: var(--o-color);
+  box-shadow: 0 0 16px var(--o-glow);
+}
+
+.markBtn:hover:not(.active) {
+  border-color: var(--text-muted);
+  color: var(--text-main);
+}
+
+.markAssigned {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.assignedX {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--x-color);
+  text-shadow: 0 0 12px var(--x-glow);
+}
+
+.assignedO {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--o-color);
+  text-shadow: 0 0 12px var(--o-glow);
+}
+
+.vs {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent);
+  padding-top: 32px;
+  flex-shrink: 0;
+  text-shadow: 0 0 20px var(--accent-glow);
+}
+
+.error {
+  text-align: center;
+  color: #ff6b9d;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  background: rgba(255, 107, 157, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+}
+
+.startBtn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  border-radius: var(--radius-md);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
+}
+
+.startBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(124, 58, 237, 0.6);
+}
+
+.startBtn:active {
+  transform: translateY(0px);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px 20px;
+  }
+
+  .players {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .vs {
+    align-self: center;
+    padding-top: 0;
+  }
+}

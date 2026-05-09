@@ -1,0 +1,106 @@
+.scoreSheet {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  width: 100%;
+}
+
+.scoreCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+}
+
+.xCard {
+  background: rgba(255, 107, 157, 0.1);
+  border-color: rgba(255, 107, 157, 0.3);
+}
+
+.oCard {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.mark {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.xCard .mark {
+  color: var(--x-color);
+  text-shadow: 0 0 12px var(--x-glow);
+}
+
+.oCard .mark {
+  color: var(--o-color);
+  text-shadow: 0 0 12px var(--o-glow);
+}
+
+.name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.score {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.drawCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 10px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  flex: 0 0 72px;
+}
+
+.drawIcon {
+  font-size: 1.3rem;
+}
+
+.drawLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.drawScore {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.compact .scoreCard {
+  padding: 10px 8px;
+}
+
+.compact .score,
+.compact .drawScore {
+  font-size: 1.5rem;
+}
+
+.compact .mark {
+  font-size: 1.2rem;
+}
